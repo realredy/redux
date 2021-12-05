@@ -5,6 +5,12 @@ import { createStore } from 'redux'
 */
 import countReducer from './counter/countReducer'
 // * este metodo recibe como parametro el reducer importado anteriomente
- const store = createStore(countReducer) 
+
+// ? @multipleReducers para crear multiple reducer introducimos este codigo 
+import bootStore from '.././redux/multipleReducer' 
+const store = createStore(bootStore) 
+//  const store = createStore(countReducer) 
 
 export default store
+
+//! El store es unico no importa que uses uno o multiple reducers

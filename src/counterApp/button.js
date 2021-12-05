@@ -8,6 +8,7 @@ import increment from '../redux/counter/countAction'
  * el valor al hacer click
 */
  function Button(props) { 
+    
     return (
         <div>
              <span>implementation count: {props.actualCount}</span>
@@ -17,9 +18,12 @@ import increment from '../redux/counter/countAction'
     )
 }
 
-const mapStoreProps = state =>{
+// ! Ojo que esto es lo que manda el props y no  <Provider store={ store } >
+const mapStoreProps = state =>{ 
     return {
-        actualCount: state.actualCount
+//? Como usamos multiple reducer usamos: state.counter.actualCount
+//? de lo contrario usamos: state.actualCount
+        actualCount: state.counter.actualCount
     }
 }
 const mapDispachProps = dispach => {
@@ -32,3 +36,4 @@ export default connect(mapStoreProps, mapDispachProps)(Button)
  * ?Podemos user HOOKS en vez de usar Connect para realizar esta 
  * ?operacion, los mismos han sido anadidos en la version 7.1
  *  */
+ 

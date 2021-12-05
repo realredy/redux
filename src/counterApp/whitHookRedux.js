@@ -8,7 +8,7 @@ import increment from '../redux/counter/countAction'
 
 function WhitHookRedux() {
  const dispach = useDispatch() // ? asignamos la constante a la funcion dispach
- const actualCount = useSelector(state => state.actualCount) // * asignamos la constante al valor del stado
+ const actualCount = useSelector(state => state.counter.actualCount) // * asignamos la constante al valor del stado
  /**
   * ! href="#" onClick={ ()=> dispach( increment() ) }
   * ! el evento de click crea una funcion que retorna un dispach que recibe como parametro la accion
