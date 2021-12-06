@@ -1,7 +1,9 @@
 import COUNT_INCREMENT from './countType'
-const increment = ()=>{
+//? asignamos 1 en caso de no tener asignado nada en paramentros
+const increment = (numero = 1)=>{
        return {
-          type: COUNT_INCREMENT
+          type: COUNT_INCREMENT,
+          payload: numero
        }
 }
  export default increment

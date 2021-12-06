@@ -3,6 +3,7 @@ import Button from './button'
 import { Provider } from 'react-redux'
 import  WhitHookRedux  from './whitHookRedux.js'
 import Boot_reducers from './bootreducers'
+import Payload from './payload'
 /**
  * * Provider 
  * Este es el encargadode encapsular el valor que sera compartido dentro de todos
@@ -10,6 +11,7 @@ import Boot_reducers from './bootreducers'
  * actualmente es 100 , la acccion, y el reducer que el encargado de transformar el dato
 */
  import store from '../redux/store' // ! esto para usarlo solo con un store //--- <Provider store={store} >
+
    
  const Counter = () => {
     return (
@@ -18,6 +20,7 @@ import Boot_reducers from './bootreducers'
                 <Button />
                 <WhitHookRedux />  
                 <Boot_reducers />
+                <Payload />
             </Provider>
              
         </div>
