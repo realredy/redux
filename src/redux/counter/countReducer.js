@@ -9,7 +9,12 @@ const initialState = {
 * es el encargado de realizar la operacion matematica o la llamada 
 * api rest o infinidad de funciones
 */
-const countReducer = (state = initialState, action) => {
+const countReducer = (state = initialState, action) => { 
+    /**
+     * action = action{type: COUNT_INCREMENT, payload: 5}
+     * Al anadir payload podemos acceder por via del action a payload que 
+     * tiene el valor de useState
+    */
     switch(action.type){
         case COUNT_INCREMENT :
         return {
@@ -18,7 +23,7 @@ const countReducer = (state = initialState, action) => {
             // total el objeto y luego entonces pasar a transformar el valor del parametro 
             // que deseamos cambiar
             ...state,
-            actualCount: state.actualCount - 1
+            actualCount: state.actualCount - action.payload
         }
         // * por defecto devolvemos todo el objeto
        default : 
