@@ -1,4 +1,5 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk'
 /*
  *  hace la primera aparicion redux con el metodo reateStore el cual guarda
  * el resultado que guarda el reducer 
@@ -8,7 +9,7 @@ import countReducer from './counter/countReducer'
 
 // ? @multipleReducers para crear multiple reducer introducimos este codigo 
 import bootStore from '.././redux/multipleReducer' 
-const store = createStore(bootStore) 
+const store = createStore(bootStore , applyMiddleware(thunk)) 
 //  const store = createStore(countReducer) 
 
 export default store

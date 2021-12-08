@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css'; 
+import ReactDOM from 'react-dom'; 
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import Counter from './counterApp/counter';
+// import Counter from './counterApp/counter';
+import Mirouter from './router';
  
 ReactDOM.render(
   <React.StrictMode> 
-    <Counter /> 
+    <BrowserRouter>
+      <Mirouter />
+    </BrowserRouter>,
   </React.StrictMode>,
   document.getElementById('root')
 );

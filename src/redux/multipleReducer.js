@@ -4,10 +4,12 @@ import { combineReducers } from 'redux'
 */
 import TextCountReducer from './textCounter/textCounterReducer'
 import countReducer from './counter/countReducer'
+import asyncReducer from '../async/asyncResources/asyncReducers'
 
 const bootStore = combineReducers({
     counter: countReducer,
-    text: TextCountReducer
+    text: TextCountReducer,
+    async: asyncReducer
 })
 
 export default bootStore
