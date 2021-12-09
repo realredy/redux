@@ -11,6 +11,7 @@ import Payload from './payload'
  * actualmente es 100 , la acccion, y el reducer que el encargado de transformar el dato
 */
  import store from '../redux/store' // ! esto para usarlo solo con un store //--- <Provider store={store} >
+import Fechdata from '../async/fechdata'
 
    
  const Counter = () => {
@@ -21,6 +22,7 @@ import Payload from './payload'
                 <WhitHookRedux />  
                 <Boot_reducers />
                 <Payload />
+                <Fechdata />
             </Provider>
              
         </div>
