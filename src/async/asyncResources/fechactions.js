@@ -13,25 +13,25 @@ export const fechDataSucess = (allUser) => {
     } 
 } 
 
-export const fechDataError = (dataError) => {
+export const fechDataError = (error) => {
     return {
         type: DATA_FAIL,
-        payload: dataError
+        payload: error
     } 
 } 
 
 export const datafech = () => {
     return (dispatch) =>{
         dispatch(fechAllData())
-        try {
+        // try {
             fetch('https://jsonplaceholder.typicode.com/users/1/posts')
             .then(data => data.json()).then( data => {
                 dispatch(fechDataSucess(data))
-            })
-        } catch (error) {
-            dispatch(fechDataError(error))
-            console.log(error)
-        }
+            }).catch(error => dispatch(fechDataError(error)))
+        // } catch (error) {
+         //   dispatch(fechDataError(error))
+         //   console.log('fechacion::: fromAction::',error)
+        // }
         
     }
 }

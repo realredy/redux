@@ -3,28 +3,28 @@ import {FECH_DATA, DATA_SUCESS, DATA_FAIL} from './fechTypes'
 const initialState = {
     loadingData: true,
     allUser: [],
-    dataError: ''
+    error: ''
 } 
 const asyncReducer = (state = initialState, action) => {
         switch (action.type) {
             case FECH_DATA:
                 return{
                     ...state,
-                    loadingData: action.payload
+                    loadingData: true
                 }
                 break;
                case DATA_SUCESS:
                    return{ 
                         loadingData: false,
                         allUser: action.payload,
-                        dataError: ''
+                        error: ''
                            }
                break;
                case DATA_FAIL:
                    return{ 
                         loadingData: false,
                         allUser: [],
-                        dataError: action.payload
+                        error: action.payload
                            }
                break;
             default:
