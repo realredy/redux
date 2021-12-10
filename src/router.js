@@ -1,6 +1,5 @@
 import React from 'react'
 import { Routes, Route, Link } from "react-router-dom"; 
-import Displaydata from './async/displayData';
 import Counter from './counterApp/counter';
 
 function Mirouter() {
@@ -16,7 +15,6 @@ function Mirouter() {
                 </ul> 
             <Routes>
                 <Route path="/" element={<Counter />} /> 
-                <Route path="async" element={<Displaydata /> }  /> 
             </Routes>
         </div>
     )

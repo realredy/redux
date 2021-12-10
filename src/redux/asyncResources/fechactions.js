@@ -20,11 +20,11 @@ export const fechDataError = (error) => {
     } 
 } 
 
-export const datafech = () => {
+export const datafech = (text) => {
     return (dispatch) =>{
         dispatch(fechAllData())
         // try {
-            fetch('https://jsonplaceholder.typicode.com/users/1/posts')
+            fetch(text) // 'https://jsonplaceholder.typicode.com/users/1/posts' // https://tinyfac.es/api/data?limit=50&quality=10
             .then(data => data.json()).then( data => {
                 dispatch(fechDataSucess(data))
             }).catch(error => dispatch(fechDataError(error)))
