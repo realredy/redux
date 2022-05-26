@@ -1,0 +1,23 @@
+.wrapperMarkers { 
+  
+    margin: 20px;
+    padding: 0;
+ }
+ .wrapperMarkers ul{ 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90px;
+ }
+ .wrapperMarkers ul li{ 
+   list-style: none;
+   /* width: 33%; */
+   width: 30px;
+ }
+ .wrapperMarkers ul li input{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+ }

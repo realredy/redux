@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
-// import Fechdata from './fechdata';
-import WhitHookRedux from './whitHookRedux';
+import App from './App'; 
 /**
  * [renders learn react link] > este es el nombre del
  * test que se mostrara, en este una breve descripcion
@@ -12,7 +11,9 @@ import WhitHookRedux from './whitHookRedux';
  * luado en el test
 */
 test('my first test, testing fechdata', () => {
-  render(<WhitHookRedux /> ); 
-  const linkElement = screen.getByText(/Que contiene redux/i);
+  render( <App/> ); 
+  const linkElement = screen.getByText(/React/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+ 
